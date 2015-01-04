@@ -1,4 +1,4 @@
 Lazy News
 =========
 
-Loading news feeds lazily on scroll. 
+Loading JSON feed lazily on scroll. It is assumed that the remote host has CORS enabled.
