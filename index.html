@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lazy News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loading JSON data lazily.">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="container">
+      <h1>
+        Lazy <small class="glyphicon glyphicon-flash"></small> News 
+        <small class="pull-right github">
+          <a href="https://github.com/vasilionjea/lazy-news">Fork me on GitHub</a>
+        </small>
+      </h1>
+    </nav>
+  </header>
+
+  <h3 class="text-center lead">
+    Welcome to LAZY <small class="glyphicon glyphicon-flash"></small> NEWS.
+    <br> <small class="glyphicon glyphicon-arrow-down"></small> <small>Scroll down to see more stories.</small>
+  </h3>
+
+  <section id="news" class="container"></section>
+  <div class="alert alert-loading" role="alert">Loading...</div>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/lazy-news.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>

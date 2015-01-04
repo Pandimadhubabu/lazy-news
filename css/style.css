@@ -1,0 +1,131 @@
+/**
+ * Base
+ */
+body {
+  background: #FCFCFE;
+}
+
+.container {
+  padding-left: 2.875em;
+  padding-right: 2.875em;
+}
+
+
+
+/**
+ * Header + Navigation
+ */
+header {
+  margin-bottom: 2.325em;
+  border-bottom: 1px solid #F0F0F1;
+  background: #FFF;
+  color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+nav {
+  padding: 15px 0;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.925em;
+  text-transform: uppercase;
+}
+
+nav h1 .glyphicon {
+  color: #F38585;
+}
+
+
+
+/**
+ * Main
+ */
+#news {
+  margin: 2.325em auto;
+  min-height: 600px;
+}
+
+.story {
+  margin-bottom: 1.665em;
+  border: 1px solid #F0F0F1;
+  border-radius: 0;
+  opacity: .98;
+}
+
+.story .panel-body {
+  padding: 1.875em;
+  border-left: 4px solid #FF8686;
+}
+
+.story h3 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.story time {
+  font-size: 1.125em;
+  font-weight: 300;
+  color: #A2A3A5
+}
+
+
+
+/**
+ * Widgets
+ */
+.alert-loading {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+
+  display: none;
+
+  margin-left: -10%;
+  margin-bottom: 15px;
+  width: 20%;
+  padding: 12px;
+
+  color: #FFF;
+  text-align: center;
+  background: rgba(163, 165, 168, 0.97);
+  box-shadow: 0 0 4px -1px rgba(35, 37, 41, 0.2);
+}
+
+.github {
+  display: inline-block;
+  padding: 5px 0;
+  text-transform: none;
+}
+
+.github a {
+  font-size: .875em;
+}
+
+
+
+/**
+ * Media Queries
+ */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.875em;
+    padding-right: 1.875em;
+  }
+
+  nav h1 {
+    font-size: 1.665em;
+    text-align: center;
+  }
+
+  .alert-loading {
+    width: 40%;
+    margin-left: -20%;
+    padding: 10px;
+  }
+
+  .github {
+    display: none;
+  }
+}
