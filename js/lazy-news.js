@@ -31,7 +31,7 @@
       // scrolling and this delay has ended.
       delay: 200,
 
-      // The offset in pixels before reaching bottom of the page.
+      // The offset in pixels before reaching the bottom of the page.
       // 
       // It triggers the loading of the next items 300 pixels before reaching the 
       // bottom of the document.
@@ -41,8 +41,8 @@
       // new items have been loaded.
       done: function(data, jqXHR) {},
 
-      // Fail callback after the `scroll` event has been handled but the Ajax 
-      // request has failed.
+      // Fail callback fires after the `scroll` event has been handled but the  
+      // Ajax request has failed.
       fail: function(jqXHR, textStatus, errorThrown) {}
     }
   };
@@ -68,13 +68,15 @@
     _attachScroll: function() {
       var self = this;
       
-      // It won't handle the event if we're scrolling too fast because we're clearing the timeout.
+      // It won't handle the event if we're scrolling too fast because we're 
+      // clearing the timeout, which is a good thing!
       $window.off('scroll.lazyNews').on('scroll.lazyNews', function() {
         self._timer && window.clearTimeout(self._timer);
         self._timer = window.setTimeout(self._scrollHandler.bind(self), self._settings.scroll.delay);
       });
 
-      // In case the document isn't very tall and there is no scroll bar.
+      // In case the document isn't very tall and there is no scroll bar, we
+      // trigger the even manually.
       $window.trigger('scroll');
     },
 
@@ -111,7 +113,7 @@
       return this._settings.endpoint.url + '?' + $.param(query);
     },
 
-    // Sort news items by date in ascending order.
+    // Sort the news items by date in ascending order.
     _ascendByDate: function(news) {
       return news.sort(function(a, b) {
         var d1 = new Date(a.published), d2 = new Date(b.published);
@@ -198,11 +200,11 @@
       // Success
       this.$xhr.done(function(data, textStatus, jqXHR) {
         if (data && data.news && data.news.length) {
-          // Sort & built the html
+          // Sort & build the html
           self._ascendByDate(data.news);
           self._buildHtml(data.news);
 
-          // Yield to `done` option
+          // Yield to the `done` option
           self._settings.scroll.done.call(self, data.news, jqXHR);
 
           // Move to the next batch
