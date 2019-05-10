@@ -9,7 +9,7 @@
     loadNews: function() {
       lazyNews('#news', {        
         endpoint: {
-          url: 'http://www.stellarbiotechnologies.com/media/press-releases/json',
+          url: 'https://www.stellarbiotechnologies.com/media/press-releases/json',
           limit: 8
         }
       });
