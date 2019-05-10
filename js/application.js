@@ -9,7 +9,7 @@
     loadNews: function() {
       lazyNews('#news', {        
         endpoint: {
-          url: 'https://www.stellarbiotechnologies.com/media/press-releases/json',
+          url: 'https://fed757.herokuapp.com/?url=https://feeds.feedburner.com/01/ar/a',
           limit: 8
         }
       });
